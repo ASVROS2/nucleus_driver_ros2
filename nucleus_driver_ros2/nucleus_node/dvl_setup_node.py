@@ -66,7 +66,7 @@ class DVLSetupNode(Node):
             set_ahrs_resp = self.call_service(self.setahrs_client, set_ahrs_req)
             self.get_logger().info(f"SETAHRS command response: {set_ahrs_resp.reply}")
 
-            # 5. Setting up Trigger for Bottomtrackingg
+            # 5. Setting up Trigger for Bottomtracking
             self.get_logger().info("Setting up Trigger to get Bottom Track...")
             set_trig_req = Command.Request()
             set_trig_req.command = 'SETTRIG,SRC="INTERNAL",ALTI=2,CP=0'
